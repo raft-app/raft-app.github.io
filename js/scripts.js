@@ -51,7 +51,13 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
-    document.body.querySelector('#betaForm').onsubmit((ev) => { alert('submitted'); return false;})
+    document.body.querySelector('#betaForm').addEventListener("submit", function(e){
+        // if(!isValid){
+        //     e.preventDefault();    //stop form from submitting
+        // }
+        alert('submitted');
+        e.preventDefault();
+    });//.onsubmit((ev) => { alert('submitted'); return false;})
     // $( "#betaForm" ).on( "submit", function( event ) {
     //     event.preventDefault();
     //     $("signature").val('Set Signature')
