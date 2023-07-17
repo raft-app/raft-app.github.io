@@ -51,9 +51,10 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
-    $( "#betaForm" ).on( "submit", function( event ) {
-        event.preventDefault();
-        $("signature").val('Set Signature')
-        console.log( $( this ).serialize() );
-    });
+    document.body.querySelector('#betaForm').onsubmit((ev) => { alert('submitted')})
+    // $( "#betaForm" ).on( "submit", function( event ) {
+    //     event.preventDefault();
+    //     $("signature").val('Set Signature')
+    //     console.log( $( this ).serialize() );
+    // });
 });
