@@ -73,4 +73,12 @@ window.addEventListener('DOMContentLoaded', event => {
 
         // e.preventDefault();
     });
+    const url = new URL(window.location.href);
+
+    if (url.searchParams.has('thanks')) {
+        const thanksAlert = document.body.querySelector('#thanks')
+        thanksAlert.classList.remove("hide");
+        thanksAlert.classList.add("show");
+    }
+
 });
