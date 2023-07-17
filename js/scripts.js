@@ -51,4 +51,9 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    $( "#betaForm" ).on( "submit", function( event ) {
+        event.preventDefault();
+        $("signature").val('Set Signature')
+        console.log( $( this ).serialize() );
+    });
 });
