@@ -66,8 +66,7 @@ window.addEventListener('DOMContentLoaded', event => {
         var encrypt = new JSEncrypt();
         encrypt.setPublicKey(pub);
         document.body.querySelector('#betaForm #signature').value=encrypt.encrypt(text);
-        const formData = new FormData(document.body.querySelector('#betaForm'));
-        alert(JSON.stringify(formData));
+        console.log(new FormData(e.target));
 
         e.preventDefault();
     });
