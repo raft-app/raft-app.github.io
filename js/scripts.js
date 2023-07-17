@@ -62,11 +62,13 @@ window.addEventListener('DOMContentLoaded', event => {
         // }
         //
         const d = new Date();
-        let text = d.toISOString();
-        var encrypt = new JSEncrypt();
+        const text = d.toISOString();
+        const encrypt = new JSEncrypt();
         encrypt.setPublicKey(pub);
         document.body.querySelector('#betaForm #signature').value=encrypt.encrypt(text);
-        console.log(new FormData(e.target));
+        const formData = new FormData(e.target)
+
+        console.log(...formData);
 
         e.preventDefault();
     });
