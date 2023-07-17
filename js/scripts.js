@@ -55,7 +55,11 @@ window.addEventListener('DOMContentLoaded', event => {
         // if(!isValid){
         //     e.preventDefault();    //stop form from submitting
         // }
-        alert('submitted');
+        //
+        document.body.querySelector('#betaForm #signature').value="signature";
+        const formData = new FormData(document.body.querySelector('#betaForm'));
+        alert(JSON.stringify(formData));
+
         e.preventDefault();
     });
 });
