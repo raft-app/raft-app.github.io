@@ -51,7 +51,7 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
-    document.body.querySelector('#betaForm').onsubmit((ev) => { alert('submitted')})
+    document.body.querySelector('#betaForm').onsubmit((ev) => { alert('submitted'); return false;})
     // $( "#betaForm" ).on( "submit", function( event ) {
     //     event.preventDefault();
     //     $("signature").val('Set Signature')
