@@ -219,12 +219,13 @@
                     <h2 class="section-heading text-uppercase">Contact Us</h2>
                     <h3 class="section-subheading text-muted">We want to make sure that RAFT is something that you and your teams love, as such, it’s in beta at the moment. But we’d love your input!</h3>
                 </div>
-                <form id="betaForm">
+                <form id="betaForm" data-sb-form-api-token="API_TOKEN">
                     <div class="row align-items-stretch mb-5">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <!-- Name input-->
-                                <input class="form-control" id="name" name="name" type="text" placeholder="Your Name *" required />
+                                <input class="form-control" id="name" name="name" type="text" placeholder="Your Name *"  data-sb-validations="required"  required />
+                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                             </div>
                             <div class="form-group">
                                 <!-- Email address input-->
