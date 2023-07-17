@@ -57,10 +57,5 @@ window.addEventListener('DOMContentLoaded', event => {
         // }
         alert('submitted');
         e.preventDefault();
-    });//.onsubmit((ev) => { alert('submitted'); return false;})
-    // $( "#betaForm" ).on( "submit", function( event ) {
-    //     event.preventDefault();
-    //     $("signature").val('Set Signature')
-    //     console.log( $( this ).serialize() );
-    // });
+    });
 });
