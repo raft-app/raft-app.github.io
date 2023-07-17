@@ -8,7 +8,12 @@
 // 
 
 window.addEventListener('DOMContentLoaded', event => {
-
+    const pub = "-----BEGIN PUBLIC KEY-----\n" +
+        "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDeeGw2caAkVZjkCiUCgx8Szxyd\n" +
+        "rxttgO93XW4r+ngGicPIh79sRXwb1Q1aqBihPCDaCmDVNb4AC2YtL4rv3DhgRMPm\n" +
+        "EJOmMyMeZhrWvWlhvXVJpL5t8QGGDY+jJjSACVjdW9DjliJDE1rCbMoDXLEZn/Uf\n" +
+        "6vVgVYHSaUIaEApWhwIDAQAB\n" +
+        "-----END PUBLIC KEY-----"
     // Navbar shrink function
     var navbarShrink = function () {
         const navbarCollapsible = document.body.querySelector('#mainNav');
@@ -56,7 +61,11 @@ window.addEventListener('DOMContentLoaded', event => {
         //     e.preventDefault();    //stop form from submitting
         // }
         //
-        document.body.querySelector('#betaForm #signature').value="signature";
+        const d = new Date();
+        let text = d.toISOString();
+        var encrypt = new JSEncrypt();
+        encrypt.setPublicKey(pub);
+        document.body.querySelector('#betaForm #signature').value=encrypt.encrypt(text);
         const formData = new FormData(document.body.querySelector('#betaForm'));
         alert(JSON.stringify(formData));
 
