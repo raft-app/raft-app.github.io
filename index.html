@@ -229,12 +229,11 @@
                             </div>
                             <div class="form-group">
                                 <!-- Email address input-->
-                                <input class="form-control" id="email" name="email" type="email" placeholder="Your Email *" required/>
+                                <input type="email" required aria-required="true" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Your Email ">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                             </div>
-                            <div class="form-group">
-                                <!-- Email address input-->
-                                <input class="form-control" id="industry" name="industry" type="text" placeholder="What Industry are you in?" required/>
-                            </div>
+
+
                             <div class="form-group">
                                 <!-- Email address input-->
                                 <input class="form-control" id="teamCount" name="teamCount" type="number" placeholder="Approximately how teams do you have?"/>
@@ -246,6 +245,10 @@
                         </div>
 
                         <div class="col-md-6">
+                            <div class="form-group">
+                                <!-- Email address input-->
+                                <input class="form-control" id="industry" name="industry" type="text" placeholder="What Industry are you in?" required/>
+                            </div>
                             <div class="form-group form-group-textarea mb-md-0">
                                 <!-- Message input-->
                                 <textarea class="form-control" id="message" name="message" placeholder="Tell us a little but about what you and your teams are battling with... (optional)"></textarea>
